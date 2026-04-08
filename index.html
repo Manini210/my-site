@@ -1,115 +1,133 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>VideoHub</title>
+<title>FLIXX.COM</title>
 
 <style>
 body {
-  margin: 0;
-  font-family: Arial;
-  background: #0d1b3d;
-  color: white;
+    margin: 0;
+    font-family: Arial;
+    background: #0f172a;
+    color: white;
 }
 
 /* HEADER */
-header {
-  background: #0a1630;
-  padding: 15px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+.header {
+    background: #1e293b;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
-/* LOGO */
 .logo {
-  font-size: 28px;
-  font-weight: bold;
+    font-size: 28px;
+    font-weight: bold;
+    color: #4da6ff;
 }
 
 .logo span {
-  color: orange;
+    color: white;
 }
 
-/* SEARCH */
 .search {
-  padding: 8px;
-  width: 250px;
-  border-radius: 5px;
-  border: none;
+    width: 300px;
+    padding: 8px;
+    border-radius: 5px;
+    border: none;
 }
 
 /* TITLE */
 .title {
-  padding: 15px;
-  font-size: 22px;
-  color: orange;
+    padding: 20px;
+    font-size: 22px;
+    color: #f59e0b;
 }
 
 /* GRID */
 .container {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-  gap: 15px;
-  padding: 15px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px,1fr));
+    gap: 20px;
+    padding: 20px;
 }
 
 /* CARD */
 .card {
-  background: #111;
-  border-radius: 8px;
-  overflow: hidden;
-  transition: 0.3s;
+    background: #1e293b;
+    border-radius: 10px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: 0.3s;
 }
 
 .card:hover {
-  transform: scale(1.05);
+    transform: scale(1.05);
 }
 
-/* IMAGE */
 .card img {
-  width: 100%;
-  height: 140px;
-  object-fit: cover;
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
 }
 
-/* TEXT */
-.card p {
-  padding: 8px;
-  font-size: 14px;
+.card-title {
+    padding: 10px;
+    font-size: 14px;
+}
+
+/* VIDEO PAGE */
+.video-container {
+    padding: 20px;
+}
+
+iframe {
+    width: 100%;
+    height: 500px;
+    border: none;
 }
 </style>
 
 </head>
-
 <body>
 
-<header>
-  <div class="logo">XNXX<span>.CLONE</span></div>
-  <input class="search" placeholder="Search videos...">
-</header>
+<!-- HEADER -->
+<div class="header">
+    <div class="logo">FLIXX<span>.COM</span></div>
+    <input class="search" type="text" placeholder="Search videos...">
+</div>
 
 <div class="title">VIDEOS GRATUITES</div>
 
+<!-- VIDEOS GRID -->
 <div class="container">
 
-  <!-- VIDEO 1 -->
-  <a href="video1.html">
-    <div class="card">
-      <img src="https://source.unsplash.com/400x250/?dark">
-      <p>Hot Video 🔥</p>
-    </div>
-  </a>
+    <!-- VIDEO 1 -->
+    <a href="video1.html">
+        <div class="card">
+            <img src="https://picsum.photos/400/200?1">
+            <div class="card-title">Hot Video 🔥</div>
+        </div>
+    </a>
 
-  <!-- VIDEO 2 -->
-  <a href="video2.html">
-    <div class="card">
-      <img src="https://source.unsplash.com/400x250/?night">
-      <p>Trending ⭐</p>
-    </div>
-  </a>
+    <!-- VIDEO 2 -->
+    <a href="video2.html">
+        <div class="card">
+            <img src="https://picsum.photos/400/200?2">
+            <div class="card-title">Trending ⭐</div>
+        </div>
+    </a>
 
-  <!-- VIDEO 3 -->
-  <a href="video3.html">
-    <div class="card">
-      <img src="https://source.unsplash.com/400x250/?cinema">
+    <!-- VIDEO 3 -->
+    <a href="video3.html">
+        <div class="card">
+            <img src="https://picsum.photos/400/200?3">
+            <div class="card-title">New Video 🎬</div>
+        </div>
+    </a>
+
+</div>
+
+</body>
+</html>
