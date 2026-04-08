@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
 <meta charset="UTF-8">
 <title>VideoHub</title>
@@ -8,51 +8,74 @@
 body {
   margin: 0;
   font-family: Arial;
-  background: #111;
+  background: #0d1b3d;
   color: white;
 }
 
 /* HEADER */
 header {
-  background: #000;
+  background: #0a1630;
   padding: 15px;
-  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* LOGO */
+.logo {
   font-size: 28px;
-  color: orange;
   font-weight: bold;
-  border-bottom: 2px solid orange;
+}
+
+.logo span {
+  color: orange;
+}
+
+/* SEARCH */
+.search {
+  padding: 8px;
+  width: 250px;
+  border-radius: 5px;
+  border: none;
+}
+
+/* TITLE */
+.title {
+  padding: 15px;
+  font-size: 22px;
+  color: orange;
 }
 
 /* GRID */
 .container {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
   gap: 15px;
-  padding: 20px;
+  padding: 15px;
 }
 
 /* CARD */
 .card {
-  background: #1c1c1c;
-  border-radius: 10px;
+  background: #111;
+  border-radius: 8px;
   overflow: hidden;
   transition: 0.3s;
 }
 
 .card:hover {
-  transform: scale(1.03);
+  transform: scale(1.05);
 }
 
 /* IMAGE */
 .card img {
   width: 100%;
-  height: 200px;
+  height: 140px;
   object-fit: cover;
 }
 
-/* TITLE */
-.title {
-  padding: 10px;
+/* TEXT */
+.card p {
+  padding: 8px;
   font-size: 14px;
 }
 </style>
@@ -61,15 +84,20 @@ header {
 
 <body>
 
-<header>🔥 VideoHub</header>
+<header>
+  <div class="logo">XNXX<span>.CLONE</span></div>
+  <input class="search" placeholder="Search videos...">
+</header>
+
+<div class="title">VIDEOS GRATUITES</div>
 
 <div class="container">
 
   <!-- VIDEO 1 -->
   <a href="video1.html">
     <div class="card">
-      <img src="https://source.unsplash.com/400x250/?movie">
-      <div class="title">Hot Video 🔥</div>
+      <img src="https://source.unsplash.com/400x250/?dark">
+      <p>Hot Video 🔥</p>
     </div>
   </a>
 
@@ -77,19 +105,11 @@ header {
   <a href="video2.html">
     <div class="card">
       <img src="https://source.unsplash.com/400x250/?night">
-      <div class="title">Trending ⭐</div>
+      <p>Trending ⭐</p>
     </div>
   </a>
 
   <!-- VIDEO 3 -->
   <a href="video3.html">
     <div class="card">
-      <img src="https://source.unsplash.com/400x250/?dark">
-      <div class="title">New Video 🆕</div>
-    </div>
-  </a>
-
-</div>
-
-</body>
-</html>
+      <img src="https://source.unsplash.com/400x250/?cinema">
