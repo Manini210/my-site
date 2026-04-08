@@ -1,40 +1,38 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8">
 <title>VideoHub</title>
 
 <style>
 body {
   margin: 0;
-  background: #0f0f0f;
-  font-family: Arial;
+  background: #111;
   color: white;
+  font-family: Arial;
 }
 
+/* HEADER */
 header {
-header {
-  font-size: 32px;
-  padding: 20px;
-  color: orange;
+  background: #1c1c1c;
+  padding: 15px;
   text-align: center;
+  font-size: 28px;
   font-weight: bold;
-}
-.logo {
   color: orange;
-  font-size: 22px;
-  font-weight: bold;
+  border-bottom: 2px solid orange;
 }
 
+/* CONTAINER */
 .container {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  gap: 15px;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
   padding: 20px;
 }
 
+/* CARD */
 .card {
-  background: #1c1c1c;
+  background: #1a1a1a;
   border-radius: 10px;
   overflow: hidden;
   transition: 0.3s;
@@ -44,47 +42,57 @@ header {
   transform: scale(1.05);
 }
 
+/* IMAGE */
 .card img {
   width: 100%;
+  height: 180px;
+  object-fit: cover;
 }
 
+/* TITLE */
 .title {
   padding: 10px;
   font-size: 14px;
 }
+
+/* LINKS */
+a {
+  text-decoration: none;
+  color: white;
+}
 </style>
+
 </head>
 
 <body>
 
-<header>
-  <div class="logo">🔥 VideoHub</div>
-</header>
+<header>🔥 VideoHub</header>
 
 <div class="container">
 
 <a href="video1.html">
-  <div class="card">
-    <img src="https://via.placeholder.com/300x180">
-    <div class="title">Hot Video</div>
-  </div>
+<div class="card">
+<img src="https://picsum.photos/400/250?1">
+<div class="title">Hot Video 🔥</div>
+</div>
 </a>
 
 <a href="video2.html">
-  <div class="card">
-    <img src="https://via.placeholder.com/300x180">
-    <div class="title">Trending</div>
-  </div>
+<div class="card">
+<img src="https://picsum.photos/400/250?2">
+<div class="title">Trending 💥</div>
+</div>
 </a>
 
 <a href="video3.html">
-  <div class="card">
-    <img src="https://via.placeholder.com/300x180">
-    <div class="title">New</div>
-  </div>
+<div class="card">
+<img src="https://picsum.photos/400/250?3">
+<div class="title">New Video ⭐</div>
+</div>
 </a>
 
 </div>
 
 </body>
 </html>
+Écrire à Abdelilah Belghadi
