@@ -7,19 +7,19 @@
 <style>
 body {
     margin: 0;
-    font-family: Arial;
-    background: #0f172a;
+    font-family: Arial, sans-serif;
+    background: #0b1220;
     color: white;
 }
 
 /* HEADER */
 header {
     text-align: center;
-    padding: 30px;
+    padding: 30px 20px;
 }
 
 .logo {
-    font-size: 40px;
+    font-size: 42px;
     font-weight: bold;
     color: #4da6ff;
 }
@@ -29,24 +29,45 @@ header {
     margin-top: 5px;
 }
 
-/* VIDEOS GRID */
+/* SEARCH */
+.search-box {
+    margin-top: 20px;
+}
+
+.search-box input {
+    width: 300px;
+    max-width: 90%;
+    padding: 10px;
+    border-radius: 20px;
+    border: none;
+    outline: none;
+    font-size: 14px;
+}
+
+/* GRID */
 .container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 15px;
+    gap: 20px;
     padding: 20px;
 }
 
 /* CARD */
 .card {
-    background: #111;
-    border-radius: 10px;
+    background: #111827;
+    border-radius: 12px;
     overflow: hidden;
+    transition: 0.3s;
 }
 
+.card:hover {
+    transform: scale(1.05);
+}
+
+/* IMAGE */
 .card img {
     width: 100%;
-    height: 150px;
+    height: 160px;
     object-fit: cover;
 }
 
@@ -54,7 +75,7 @@ header {
 .title {
     padding: 10px;
     font-size: 14px;
-    color: #ccc;
+    color: #ddd;
     text-align: center;
 }
 </style>
@@ -66,6 +87,10 @@ header {
 <header>
     <div class="logo">FLIXX.COM</div>
     <div class="subtitle">VIDEOS GRATUITES</div>
+
+    <div class="search-box">
+        <input type="text" placeholder="Search videos...">
+    </div>
 </header>
 
 <div class="container">
@@ -98,3 +123,4 @@ header {
 
 </body>
 </html>
+Écrire à Abdelilah Belghadi
