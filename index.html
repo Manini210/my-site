@@ -5,49 +5,53 @@
 <title>FLIXX.COM</title>
 
 <style>
-body {
+* {
     margin: 0;
-    font-family: Arial, sans-serif;
-    background: #0b1220;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #0b1120;
+    font-family: Arial;
     color: white;
 }
 
 /* HEADER */
-header {
+.header {
     text-align: center;
-    padding: 30px 20px;
+    padding: 40px 20px;
 }
 
 .logo {
-    font-size: 42px;
+    font-size: 50px;
     font-weight: bold;
-    color: #4da6ff;
+    background: linear-gradient(90deg,#4da6ff,#ffffff);
+    -webkit-background-clip: text;
+    color: transparent;
 }
 
 .subtitle {
-    color: orange;
+    color: #ff8800;
     margin-top: 5px;
 }
 
 /* SEARCH */
-.search-box {
+.search input {
     margin-top: 20px;
-}
-
-.search-box input {
-    width: 300px;
+    width: 320px;
     max-width: 90%;
-    padding: 10px;
-    border-radius: 20px;
+    padding: 12px;
+    border-radius: 30px;
     border: none;
-    outline: none;
-    font-size: 14px;
+    background: #1e293b;
+    color: white;
 }
 
 /* GRID */
-.container {
+.grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(250px,1fr));
     gap: 20px;
     padding: 20px;
 }
@@ -55,8 +59,9 @@ header {
 /* CARD */
 .card {
     background: #111827;
-    border-radius: 12px;
+    border-radius: 10px;
     overflow: hidden;
+    cursor: pointer;
     transition: 0.3s;
 }
 
@@ -65,18 +70,31 @@ header {
 }
 
 /* IMAGE */
-.card img {
+.thumb {
+    position: relative;
+}
+
+.thumb img {
     width: 100%;
     height: 160px;
     object-fit: cover;
+}
+
+/* PLAY BUTTON */
+.play {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background: rgba(0,0,0,0.6);
+    padding: 12px;
+    border-radius: 50%;
 }
 
 /* TITLE */
 .title {
     padding: 10px;
     font-size: 14px;
-    color: #ddd;
-    text-align: center;
 }
 </style>
 
@@ -84,42 +102,59 @@ header {
 
 <body>
 
-<header>
+<div class="header">
     <div class="logo">FLIXX.COM</div>
     <div class="subtitle">VIDEOS GRATUITES</div>
 
-    <div class="search-box">
-        <input type="text" placeholder="Search videos...">
+    <div class="search">
+        <input type="text" placeholder="Search...">
     </div>
-</header>
+</div>
 
-<div class="container">
+<div class="grid">
 
     <!-- VIDEO 1 -->
-    <div class="card">
-        <a href="video1.html">
-            <img src="https://via.placeholder.com/300x200">
-        </a>
-    ></div>
+    <div class="card" onclick="openVideo('https://www.eporner.com/embed/ZUMuvcOlidj/')">
+        <div class="thumb">
+            <img src="thumb1.jpg">
+            <div class="play">▶</div>
+        </div>
+        <div class="title">Hot video</div>
     </div>
 
     <!-- VIDEO 2 -->
-    <div class="card">
-        <a href="video2.html">
-            <img src="https://via.placeholder.com/300x200">
-        </a>
-        <div class="title"></div>
+    <div class="card" onclick="openVideo('https://www.eporner.com/embed/rgnQA9g7rnm/')">
+        <div class="thumb">
+            <img src="thumb2.jpg">
+            <div class="play">▶</div>
+        </div>
+        <div class="title">Trending</div>
     </div>
 
     <!-- VIDEO 3 -->
-    <div class="card">
-        <a href="video3.html">
-            <img src="https://via.placeholder.com/300x200">
-        </a>
-    </div>
+    <div class="card" onclick="openVideo('https://www.eporner.com/embed/YnRfYglQbDs/')">
+        <div class="thumb">
+            <img src="thumb3.jpg">
+            <div class="play">▶</div>
+        </div>
+        <div class="title">New video</div>
     </div>
 
 </div>
 
+<!-- POPUP VIDEO -->
+<div id="player" style="display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:black;">
+    <iframe id="frame" width="100%" height="100%" frameborder="0" allowfullscreen></iframe>
+</div>
+
+<script>
+function openVideo(url){
+    document.getElementById("player").style.display="block";
+    document.getElementById("frame").src = url;
+}
+</script>
+
 </body>
 </html>
+Écrire à Abdelilah Belghadi
+
